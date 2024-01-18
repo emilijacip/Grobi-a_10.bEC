@@ -1,1 +1,10 @@
+def lasit():
+  try:
+      with open:('lasit.txt', "r", encoding='utf-8') #parāda failu, kuru lasīt
+          for x in datne:
+              print(x)
+  except FileNotFoundError:  #izmetas errors, kur fails nav atrasts
+  print("Error! Datne nav atrasta!")
 
+if name == "__main__":
+    lasit()

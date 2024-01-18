@@ -1,1 +1,22 @@
+def lasit (fails):
+    try:
+        with open('fails', "r", encoding='utf-8')as f:
+            saturs=f.read()
+            print("Faila saturs:")
+            print(saturs)
+    except FileNotFoundError:
+        print(f"Fails {fails} nav atrasts!")
 
+if __name__=="__main__":
+    try:
+        #Lietotājs ieraksta
+        nosaukums = input("Ievadiet faila nosaukumu: ")
+        paplasinajums = input("Ievadiet faila paplaāinājumu, piemēram, txt, JSON u.c.: ")
+
+        #apvieno
+        apvieno=f"{nosaukums}.{paplasinajums}"
+
+        #Izsac funkciju, nolasīšanai un izdrukāšanai
+        print(apvieno)
+    except FileNotFoundError:
+        print("Šāda faila nepastāv!")

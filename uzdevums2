@@ -1,1 +1,17 @@
+import csv
+def lasit(fails):
+  try:
+    with open('fails', "r", encoding='utf-8') as f:
+      lasitajs=csv.reader(f)
+      print("2.kolonnas dati:")
+      for rinda in lasit:
+        if len(rinda) <= 2:
+          print(rinda)
+        else :
+          print("Nav vsimaz divi elemnti.")
+  except FileNotFoundError:
+    print("Fails nav atrasts!")
 
+if __name__=="__main__":
+fails="fails.csv"
+lasit(fails)

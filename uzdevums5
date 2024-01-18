@@ -1,1 +1,19 @@
+def vards_lietotaja (vards, nosaukums):
+    try:
+        with open(nosaukums, "w", encoding='utf-8')as f:
+            f.write(vards)
+        print(f"Vārds '{vards_lietotaja}' ierakstīts failā {nosaukums}!")
+    except FileNotFoundError:
+        print(f"Nevar ierakstīt failā {nosaukums}!")
+    except PermissionError:
+        print(f"Nav atļauja rediģēt failu {nosaukums}!")
+    except Exception as e:
+        print(f"Radās kļūda: {e}")
 
+__name__=="__main__":
+try:
+    #ievdada vārdu
+    vards=input("Ievadiet savu vārdu:")
+
+    #nosaukums
+    nosaukums=vards.txt
